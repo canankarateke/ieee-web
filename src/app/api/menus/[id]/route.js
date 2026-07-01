@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import  supabase  from "@/lib/supabase"; // Supabase bağlantı dosyanızın yolu
+import  { createClient as supabase } from "@/lib/supabase"; // Supabase bağlantı dosyanızın yolu
 
 // MENU ÖĞESİNİ GÜNCELLEME (PUT)
 export async function PUT(request, { params }) {
