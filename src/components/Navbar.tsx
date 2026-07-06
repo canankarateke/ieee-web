@@ -103,7 +103,8 @@ export default function Navbar() {
 
       {/* Mobile Navigation Drawer */}
       {isOpen && (
-        <div className="md:hidden border-t border-gray-100 bg-white px-4 py-4 space-y-2 shadow-inner">
+        <div className="md:hidden border-t border-gray-100 bg-white px-4 py-4 space-y-3 shadow-inner">
+          {/* Sayfa Linkleri */}
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -114,8 +115,32 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+
+          {/* Çizgi (Ayraç) */}
+          <div className="border-t border-gray-100 my-2 pt-2"></div>
+
+          {/* Mobil Dil Değiştirme Butonu */}
+          <button
+            onClick={() => {
+              toggleLanguage();
+              setIsOpen(false); // Dil seçince menü kapansın
+            }}
+            className="w-full flex items-center justify-between px-4 py-2.5 rounded-lg border border-gray-200 text-sm font-semibold text-gray-800 hover:bg-gray-50 cursor-pointer"
+          >
+            <div className="flex items-center gap-2">
+              <Globe className="w-4 h-4 text-[#0A5DA6]" />
+              <span>{locale === "en" ? "Dil Değiştir (TR)" : "Change Language (EN)"}</span>
+            </div>
+            <span className="bg-gray-100 text-xs px-2 py-0.5 rounded uppercase">{locale === "en" ? "TR" : "EN"}</span>
+          </button>
+
+          {/* Mobil Yönetici Paneli Butonu */}
+          <Link
+            href="/admin"
+            onClick={() => setIsOpen(false)}
+            className="block text-center text-sm font-bold bg-[#E0F2FE] hover:bg-[#0A5DA6] text-[#0A5DA6] hover:text-white px-4 py-2.5 rounded-lg transition-all"
+          >
+            {locale === "en" ? "Admin Panel" : "Yönetici Paneli"}
+          </Link>
         </div>
       )}
-    </header>
-  );
-}
