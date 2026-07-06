@@ -11,7 +11,7 @@ const translations = {
     },
     home_hero: {
       tag: "Advancing Technology for Humanity",
-      title: "Welcome to IEEE Student Branch",
+      title: "Welcome to IEEE Fırat Student Branch",
       description: "Join us in shaping the future of technology through innovation, collaboration, and learning",
       viewEvents: "View Events",
       learnMore: "Learn More"
@@ -85,7 +85,7 @@ const translations = {
     },
     home_hero: {
       tag: "Advancing Technology for Humanity",
-      title: "IEEE Öğrenci Koluna Hoş Geldiniz",
+      title: "IEEE Fırat Öğrenci Koluna Hoş Geldiniz",
       description: "İnovasyon, iş birliği ve öğrenim yoluyla teknolojinin geleceğini şekillendirmede bize katılın",
       viewEvents: "Etkinlikleri Gör",
       learnMore: "Daha Fazla Bilgi"
