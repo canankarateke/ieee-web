@@ -36,20 +36,20 @@ export default function Navbar() {
       <div className="w-full px-6 sm:px-12 py-4 flex items-center justify-between">
 
         {/* Logo and Brand */}
-        <Link href="/" className="flex items-center gap-3 sm:gap-4 group min-w-0">
-          {/* Logo görseli: Mobilde küçük, sm (tablet/PC) ekranlarda senin istediğin büyük boyutta kalır */}
+        <Link href="/" className="flex items-center gap-3 group min-w-0 flex-1 sm:flex-initial">
+          {/* Logo görseli: Mobilde gayet net ve büyük, PC'de kendi orijinal boyutunda */}
           <img
             src="/logo.png"
             alt="IEEE Fırat Logo"
-            className="w-[140px] sm:w-[260px] h-12 sm:h-16 object-contain shrink-0"
+            className="w-[160px] sm:w-[260px] h-auto object-contain shrink-0"
           />
 
-          {/* Yazı alanı: Mobilde çok dar ekranlarda sığmayacağı için gizlenir, tablet ve PC'de aynen kalır */}
-          <div className="hidden md:flex flex-col text-left">
-            <span className="font-bold text-gray-900 leading-tight text-xl tracking-tight group-hover:text-[#0A5DA6] transition-colors">
+          {/* Yazı Alanı: Mobilde logonun yanına sığmadığı için altına ya da daha küçük puntolarla yanına esneyecek */}
+          <div className="flex flex-col text-left min-w-0">
+            <span className="font-bold text-gray-900 leading-tight text-xs sm:text-xl tracking-tight group-hover:text-[#0A5DA6] transition-colors line-clamp-2 sm:line-clamp-none">
               IEEE Fırat Student Branch
             </span>
-            <span className="text-xs text-gray-500 font-semibold tracking-wider uppercase">
+            <span className="text-[9px] sm:text-xs text-gray-500 font-semibold tracking-wider uppercase truncate">
               Advancing Technology
             </span>
           </div>
