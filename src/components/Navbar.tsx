@@ -36,15 +36,16 @@ export default function Navbar() {
       <div className="w-full px-6 sm:px-12 py-4 flex items-center justify-between">
 
         {/* Logo and Brand */}
-        <Link href="/" className="flex items-center gap-4 group">
-          {/* Logo görseli eklendi */}
+        <Link href="/" className="flex items-center gap-3 sm:gap-4 group min-w-0">
+          {/* Logo görseli: Mobilde küçük, sm (tablet/PC) ekranlarda senin istediğin büyük boyutta kalır */}
           <img
             src="/logo.png"
             alt="IEEE Fırat Logo"
-            className="w-60 h-16 object-contain shrink-0"
+            className="w-[140px] sm:w-[260px] h-12 sm:h-16 object-contain shrink-0"
           />
 
-          <div className="flex flex-col text-left">
+          {/* Yazı alanı: Mobilde çok dar ekranlarda sığmayacağı için gizlenir, tablet ve PC'de aynen kalır */}
+          <div className="hidden md:flex flex-col text-left">
             <span className="font-bold text-gray-900 leading-tight text-xl tracking-tight group-hover:text-[#0A5DA6] transition-colors">
               IEEE Fırat Student Branch
             </span>
