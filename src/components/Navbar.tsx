@@ -41,7 +41,7 @@ export default function Navbar() {
           <img
             src="/logo.png"
             alt="IEEE Fırat Logo"
-            className="w-90 h-16 object-contain shrink-0"
+            className="w-70 h-16 object-contain shrink-0"
           />
 
           <div className="flex flex-col text-left">
